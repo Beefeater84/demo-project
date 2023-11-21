@@ -1,5 +1,6 @@
 import {createRoot} from 'react-dom/client';
-import Counter from "./components/Counter";
+import {BrowserRouter} from "react-router-dom";
+import App from "./App";
 
 // Clear the existing HTML content
 document.body.innerHTML = '<div id="root"></div>';
@@ -9,9 +10,8 @@ const rootNode = document.getElementById('root');
 if (!!rootNode) {
     const root = createRoot(rootNode);
     root.render(
-        <>
-            <h2>Hello World</h2>
-            <Counter/>
-        </>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     );
 }

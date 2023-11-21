@@ -6,5 +6,6 @@ export default function buildDevServer({paths, PORT}: BuildOption): DevServerCon
         static: paths.devServer,
         port: PORT,
         open: true, // open browser by default
+        historyApiFallback: true, // allow to use react-router-dom
     };
 }
