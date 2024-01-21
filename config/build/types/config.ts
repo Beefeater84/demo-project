@@ -1,4 +1,3 @@
-
 export type BuildMode = "development" | "production";
 
 export interface BuildPaths {
@@ -6,7 +5,7 @@ export interface BuildPaths {
     build: string;
     htmlTemplate: string;
     devServer: string;
-
+    projectRoot: string;
 }
 
 export interface BuildOption {
