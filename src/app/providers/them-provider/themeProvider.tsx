@@ -22,7 +22,6 @@ export default function ThemeProvider({children}: ThemeProviderProps) {
     const [theme, setTheme] = useState<Theme>("light");
 
     const toggleTheme = () => {
-        console.log("theme", theme)
         setTheme(theme === 'light' ? 'dark' : 'light');
     }
 
