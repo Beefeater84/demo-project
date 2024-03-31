@@ -1,8 +1,7 @@
 import {Link, Route, Routes} from "react-router-dom";
 import {lazy, Suspense, useContext} from "react";
 import {ThemeContext} from "./providers/them-provider/themeProvider";
-import "the-new-css-reset/css/reset.css";
-import "@/app/styles/global.css";
+import "@/app/styles/index.scss";
 
 const Main = lazy(() => import('../pages/main/main'));
 const About = lazy(() => import('../pages/about/about'));
