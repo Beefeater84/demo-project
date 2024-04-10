@@ -13,11 +13,7 @@ export default function App() {
 
     return (
         <div className="app" data-theme={theme}>
-            <Navbar>
-                <Link to="/">Main</Link>
-                <Link to="/about">About</Link>
-                <button onClick={toggleTheme}> F</button>
-            </Navbar>
+            <Navbar />
             <RouterConfig/>
 
         </div>
