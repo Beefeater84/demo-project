@@ -1,16 +1,9 @@
-import {Link, Route, Routes} from "react-router-dom";
-import {lazy, Suspense, useContext} from "react";
+import {Link} from "react-router-dom";
+import {useContext} from "react";
 import {ThemeContext} from "./providers/them-provider/themeProvider";
 import "@/app/styles/index.scss";
 import RouterConfig from "@/app/router/router";
-
-const Main = lazy(() => import('../pages/main/main'));
-const About = lazy(() => import('../pages/about/about'));
-
-// ToDo вынести навбар в отдельный компонент
-// Создать тему для приложения
-// Сделать UI компонент ссылку
-// Установить classnames
+import {Navbar} from "@/widget/navbar";
 
 
 export default function App() {
@@ -19,13 +12,12 @@ export default function App() {
 
 
     return (
-        <div className="container" data-theme={theme}>
-            <nav>
+        <div className="app" data-theme={theme}>
+            <Navbar>
                 <Link to="/">Main</Link>
                 <Link to="/about">About</Link>
                 <button onClick={toggleTheme}> F</button>
-            </nav>
-
+            </Navbar>
             <RouterConfig/>
 
         </div>
