@@ -7,7 +7,7 @@ import {Navbar} from "@/widget/navbar";
 
 export default function App() {
 
-    const {theme, toggleTheme} = useContext(ThemeContext)
+    const {theme} = useContext(ThemeContext)
 
 
     return (
