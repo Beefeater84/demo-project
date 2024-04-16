@@ -15,18 +15,22 @@ export const Navbar: FC<NavbarProps> = (props) => {
     return (
         <div className={classNames(styles.navbar, className)}>
             <ThemeSwitcher />
-            <AppLInk
-                to="/"
-                theme={AppLinkThemes.SECONDARY}
-            >
-                Main
-            </AppLInk>
-            <AppLInk
-                to="/about"
-                theme={AppLinkThemes.SECONDARY}
-            >
-                About
-            </AppLInk>
+            <div className={styles.links}>
+                <AppLInk
+                    to="/"
+                    theme={AppLinkThemes.SECONDARY}
+                >
+                    Main
+                </AppLInk>
+                <AppLInk
+                    to="/about"
+                    theme={AppLinkThemes.SECONDARY}
+                >
+                    About
+                </AppLInk>
+            </div>
+
+
         </div>
     )
 }

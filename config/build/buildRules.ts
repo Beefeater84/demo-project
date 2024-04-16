@@ -57,9 +57,9 @@ export default function buildRules(options: BuildOption): RuleSetRule[] {
 
     // The order of loaders is important. This structure will help us to see the order of loaders.
     return [
+        fileLoader,
         typeScriptLoader,
         styleLoader,
         SVGLoader,
-        fileLoader
     ]
 }
