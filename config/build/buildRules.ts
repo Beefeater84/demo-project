@@ -14,6 +14,20 @@ export default function buildRules(options: BuildOption): RuleSetRule[] {
         exclude: /node_modules/,
     }
 
+    const SVGLoader = {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+    }
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
 
     // by default webpack put link to css in js files
     // MiniCssExtractPlugin.loader - this loader will extract css from js files and put it in separate file.
@@ -31,7 +45,7 @@ export default function buildRules(options: BuildOption): RuleSetRule[] {
                         auto: (resourcePath: string) => resourcePath.endsWith(".module.css"), // generate hash classes only for files with .module.css extension
                         localIdentName: isDev ?
                             "[path][name]__[local]--[hash:base64:5]" : // for dev normal class names
-                            "[hash:base64:8]" , // for prod - short class names
+                            "[hash:base64:8]", // for prod - short class names
                     },
 
                 },
@@ -44,6 +58,8 @@ export default function buildRules(options: BuildOption): RuleSetRule[] {
     // The order of loaders is important. This structure will help us to see the order of loaders.
     return [
         typeScriptLoader,
-        styleLoader
+        styleLoader,
+        SVGLoader,
+        fileLoader
     ]
 }

@@ -1,24 +1,20 @@
 import styles from "./navbar.module.css";
-import {FC, ReactNode, useContext} from "react";
+import {FC} from "react";
 import classNames from "classnames";
-import {Link} from "react-router-dom";
-import {ThemeContext} from "@/app/providers/them-provider/themeProvider";
 import {AppLInk, AppLinkThemes} from "@/shared/ui/AppLink/AppLInk";
+import {ThemeSwitcher} from "@/widget/theme-switcher";
 
 interface NavbarProps {
     className?: string,
-    children?: ReactNode
 }
 
-export const Navbar: FC<NavbarProps> = ({
-                                            className,
-                                            children
-                                        }) => {
+export const Navbar: FC<NavbarProps> = (props) => {
 
-    const {theme, toggleTheme} = useContext(ThemeContext)
+    const {className} = props;
 
     return (
         <div className={classNames(styles.navbar, className)}>
+            <ThemeSwitcher />
             <AppLInk
                 to="/"
                 theme={AppLinkThemes.SECONDARY}
@@ -31,8 +27,6 @@ export const Navbar: FC<NavbarProps> = ({
             >
                 About
             </AppLInk>
-
-            <button onClick={toggleTheme}>Theme: {theme}</button>
         </div>
     )
 }
