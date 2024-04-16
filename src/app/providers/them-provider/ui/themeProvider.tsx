@@ -9,8 +9,7 @@ interface ThemeContextProps {
 
 export const ThemeContext = createContext<ThemeContextProps>({
     theme: THEMES.LIGHT,
-    toggleTheme: () => {
-    }
+    toggleTheme: () => {}
 })
 
 interface ThemeProviderProps {

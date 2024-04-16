@@ -1,4 +1,4 @@
-:root{
+:root {
   --font-family-base: Arial, Helvetica, sans-serif;
 
   --font-size-base: 16px;
@@ -10,5 +10,8 @@
   --font-line-l: 32px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-base);
 
+
   --navbar-height: 80px;
+  --sidebar-width: 300px;
+  --collapsed-sidebar-width: 80px;
 }

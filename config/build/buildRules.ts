@@ -42,8 +42,7 @@ export default function buildRules(options: BuildOption): RuleSetRule[] {
                 loader: "css-loader",
                 options: {
                     modules: {
-                        auto: (resourcePath: string) => resourcePath.endsWith(".module.css"), // generate hash classes only for files with .module.css extension
-                        localIdentName: isDev ?
+                        auto: (resourcePath: string) => resourcePath.endsWith(".module.scss") || resourcePath.endsWith(".module.css"),                        localIdentName: isDev ?
                             "[path][name]__[local]--[hash:base64:5]" : // for dev normal class names
                             "[hash:base64:8]", // for prod - short class names
                     },
