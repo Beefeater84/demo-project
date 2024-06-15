@@ -7,6 +7,8 @@ import {ThemeProvider} from "@/app/providers/them-provider";
 document.body.innerHTML = '<div id="root"></div>';
 const rootNode = document.getElementById('root');
 
+import '@/shared/config/translateConfig/translateConfig.tsx';
+
 if (!!rootNode) {
     const root = createRoot(rootNode);
     root.render(
