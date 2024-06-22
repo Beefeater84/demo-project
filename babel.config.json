@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    ["i18next-extract", {
+        "locales": ["en", "ru"],
+        "defaultNamespace": "translation",
+        "outputPath": "public/locales/{{locale}}/{{ns}}.json"
+    }]
+  ]
+}

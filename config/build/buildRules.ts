@@ -53,10 +53,21 @@ export default function buildRules(options: BuildOption): RuleSetRule[] {
         ],
     }
 
+    const babelLoader =   {
+        test: /\.(js|jsx|tsx)$/i,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    }
 
     // The order of loaders is important. This structure will help us to see the order of loaders.
     return [
         fileLoader,
+        babelLoader,
         typeScriptLoader,
         styleLoader,
         SVGLoader,
