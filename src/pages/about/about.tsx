@@ -2,7 +2,7 @@ import {useTranslation} from "react-i18next";
 
 export default function About() {
 
-    const { t, i18n } = useTranslation(['about']);
+    const {t} = useTranslation(['about']);
 
     return (
         <div className="container">

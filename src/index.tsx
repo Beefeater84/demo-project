@@ -9,7 +9,7 @@ const rootNode = document.getElementById('root');
 
 import '@/shared/config/translateConfig/translateConfig.tsx';
 
-if (!!rootNode) {
+if (rootNode) {
     const root = createRoot(rootNode);
     root.render(
         <BrowserRouter>
