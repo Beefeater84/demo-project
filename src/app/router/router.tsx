@@ -1,10 +1,11 @@
 import {Route, Routes} from "react-router-dom";
 import {Suspense} from "react";
 import {routeConfig} from "@/shared/config/routerConfig/routeConfig";
+import {PageLoader} from "@/widget/page-loader";
 
 export function RouterConfig() {
     return (
-        <Suspense fallback={<>Loading ...</>}>
+        <Suspense fallback={<PageLoader />}>
             <div className="page">
                 <Routes>
                     {

@@ -1,9 +1,20 @@
 {
+
   "plugins": [
     ["i18next-extract", {
         "locales": ["en", "ru"],
         "defaultNamespace": "translation",
         "outputPath": "public/locales/{{locale}}/{{ns}}.json"
     }]
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
   ]
 }
