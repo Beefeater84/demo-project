@@ -1,6 +1,8 @@
 {
   "About": "",
   "Not found": "Не найдено",
+  "errorBoundary": "Sorry.. there was an error",
+  "errorReloadBtn": "reload the page",
   "header": "",
   "язык": "en"
 }

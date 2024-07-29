@@ -7,15 +7,18 @@ import {ThemeProvider} from "@/app/providers/them-provider";
 document.body.innerHTML = '<div id="root"></div>';
 const rootNode = document.getElementById('root');
 
-import '@/shared/config/translateConfig/translateConfig.tsx';
+import '@/shared/config/translateConfig/translateConfig';
+import {ErrorBoundary} from "@/app/providers/error-boundary";
 
 if (rootNode) {
     const root = createRoot(rootNode);
     root.render(
         <BrowserRouter>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
+            <ErrorBoundary>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </ErrorBoundary>
         </BrowserRouter>
     );
 }

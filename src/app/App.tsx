@@ -10,7 +10,6 @@ export default function App() {
 
     const {theme} = useContext(ThemeContext)
 
-
     return (
         <div className="app" data-theme={theme}>
             <Navbar />

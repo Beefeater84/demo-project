@@ -1,6 +1,8 @@
 {
   "About": "",
   "Not found": "Not found",
+  "errorBoundary": "Ошибка на странице",
+  "errorReloadBtn": "перезагрузить страницу",
   "header": "",
   "язык": "ru"
 }
