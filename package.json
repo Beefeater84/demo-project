@@ -7,7 +7,7 @@
     "start": "webpack serve --env PORT=3000",
     "build:prod": "webpack --env mode=production",
     "dev": "webpack --env mode=development",
-    "unit": "jest --config ./config/jest/jest.config.ts",
+    "unit": "jest --config ./src/shared/config/jest/jest.config.ts",
     "lint": "eslint ."
   },
   "author": "Miasoedov Tony",
